@@ -1,5 +1,5 @@
 import unittest
-from ValidParenthese import Solution
+from ValidParentheses_stack import Solution
 
 
 class ValidParenthesesTest(unittest.TestCase):
@@ -50,7 +50,12 @@ class ValidParenthesesTest(unittest.TestCase):
 
     def test_first_lower(self):
         temp = Solution()
-        self.value = ")()()()"
+        self.value = ")()()[]"
+        self.assertEqual(temp.isValid(self.value), False)
+
+    def test_lower_in_brackets(self):
+        temp = Solution()
+        self.value = "(])"
         self.assertEqual(temp.isValid(self.value), False)
 
 if __name__ == "__main__":

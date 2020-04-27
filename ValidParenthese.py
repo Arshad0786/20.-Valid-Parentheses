@@ -15,3 +15,7 @@ class Solution:
             return False
         else:
             return True
+        """
+        algorithm : when we find an closing bracket right next the its opening bracket then we pop both of them,
+                    eventually the string will be empty if it's valid 
+        """
